@@ -1,0 +1,54 @@
+{
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
+  "settings": {
+    "import/resolver": {
+      "typescript": {}
+    }
+  },
+  "extends": [
+    "next/core-web-vitals",
+    "airbnb",
+    "airbnb/hooks",
+    "airbnb-typescript",
+    "prettier"
+  ],
+  "plugins": ["eslint-plugin-import", "prettier"],
+  "rules": {
+    // 파일 상단 Import 문의 정렬 순서를 정의하는 규칙
+    "import/order": [
+      "error",
+      {
+        "pathGroups": [{ "pattern": "@", "group": "internal" }],
+        "groups": [
+          "external",
+          "type",
+          "parent",
+          "sibling",
+          "internal",
+          "index",
+          "builtin",
+          "object"
+        ],
+        "newlines-between": "always",
+        "alphabetize": {
+          "order": "asc"
+        }
+      }
+    ],
+    "import/prefer-default-export": [0],
+    // React 컴포넌트를 무조건 arrow function 형태만 쓰도록 고정
+    "react/function-component-definition": [
+      2,
+      {
+        "namedComponents": "arrow-function",
+        "unnamedComponents": "arrow-function"
+      }
+    ],
+
+    "react/jsx-filename-extension": [0],
+    "react/react-in-jsx-scope": [0],
+    "react/jsx-props-no-spreading": [0]
+  }
+}

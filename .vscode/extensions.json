@@ -1,0 +1,12 @@
+{
+  "recommendations": [
+    "stylelint.vscode-stylelint",
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+    "aaron-bond.better-comments",
+    "eamodio.gitlens",
+    "graphql.vscode-graphql",
+    "graphql.vscode-graphql-syntax",
+    "jonkwheeler.styled-components-snippets"
+  ]
+}
