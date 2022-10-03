@@ -1,11 +1,11 @@
 import Link from 'next/link';
-import React, { HTMLAttributes } from 'react';
+import React, { HTMLAttributes, ReactElement } from 'react';
 
 import { Footer, Header } from './styled';
 
 interface DefaultProps extends HTMLAttributes<HTMLElement> {}
 
-const Default = ({ children }: DefaultProps) => {
+const Default = ({ children }: DefaultProps): ReactElement => {
   return (
     <div>
       <Header>

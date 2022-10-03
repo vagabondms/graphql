@@ -4,7 +4,7 @@ import type { User } from 'src/types/user';
 
 const UserContext = createContext<null | Partial<User>>(null);
 
-const useUserContext = () => {
+const useUserContext = (): Partial<User> => {
   const user = useContext(UserContext);
   if (!user) {
     throw Error('User 컴포넌트의 child로 사용하세요');

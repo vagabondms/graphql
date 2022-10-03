@@ -4,7 +4,10 @@
   },
   "settings": {
     "import/resolver": {
-      "typescript": {}
+      "node": {
+        "extensions": [".js", ".jsx", ".ts", ".tsx"],
+        "moduleDirectory": ["node_modules", "src/"]
+      }
     }
   },
   "extends": [
@@ -12,10 +15,13 @@
     "airbnb",
     "airbnb/hooks",
     "airbnb-typescript",
+    "eslint:recommended",
     "prettier"
   ],
   "plugins": ["eslint-plugin-import", "prettier"],
   "rules": {
+    "curly": ["error", "all"],
+    "no-shadow": ["error"],
     // 화살표 함수에 항상 return 값을 기입하도록 설정
     "arrow-body-style": ["error", "always"],
     // 파일 상단 Import 문의 정렬 순서를 정의하는 규칙
@@ -27,8 +33,8 @@
           "external",
           "type",
           "parent",
-          "sibling",
           "internal",
+          "sibling",
           "index",
           "builtin",
           "object"
@@ -39,18 +45,33 @@
         }
       }
     ],
-    "import/prefer-default-export": [0],
+    "react/jsx-sort-props": [
+      2,
+      {
+        "callbacksLast": true,
+        "shorthandFirst": true,
+        "multiline": "first",
+        "reservedFirst": ["key", "ref"]
+      }
+    ],
+
+    "import/prefer-default-export": "off",
     // React 컴포넌트를 무조건 arrow function 형태만 쓰도록 고정
     "react/function-component-definition": [
-      2,
+      "error",
       {
         "namedComponents": "arrow-function",
         "unnamedComponents": "arrow-function"
       }
     ],
 
-    "react/jsx-filename-extension": [0],
-    "react/react-in-jsx-scope": [0],
-    "react/jsx-props-no-spreading": [0]
+    "react/jsx-filename-extension": "off",
+    "react/react-in-jsx-scope": "off",
+    "react/jsx-props-no-spreading": "off",
+
+    //typescript-eslint
+    "@typescript-eslint/explicit-function-return-type": "warn",
+    "@typescript-eslint/promise-function-async": "error",
+    "@typescript-eslint/prefer-optional-chain": "error"
   }
 }

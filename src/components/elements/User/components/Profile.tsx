@@ -1,6 +1,7 @@
+import { ReactElement } from 'react';
 import styled from 'styled-components';
 
-import { useUserContext } from './context';
+import { useUserContext } from '../context';
 
 const RoundProfileImage = styled.img`
   width: 30px;
@@ -8,7 +9,7 @@ const RoundProfileImage = styled.img`
   border-radius: 50%;
 `;
 
-const RoundProfile = () => {
+const RoundProfile = (): ReactElement | null => {
   const { profileImage } = useUserContext();
 
   if (typeof profileImage !== 'string') {
@@ -23,7 +24,7 @@ const SquareProfileImage = styled.img`
   height: 30px;
 `;
 
-const SquareProfile = () => {
+const SquareProfile = (): ReactElement | null => {
   const { profileImage } = useUserContext();
   if (typeof profileImage !== 'string') {
     return null;

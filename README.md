@@ -51,3 +51,7 @@ import ExampleComponent from '@components/common/ExampleComponent';
 #### 참고
 
 [husky, lint-staged, commitizen, commitlint를 이용한 commit시 코드 린팅/커밋 메시지 통일](https://jamesandrewwright.com/articles/commitizen-eslint-prettier-husky/)
+
+#### 기존 컴포넌트 같은 것은 읽으시고 다 지우셔도 됩니다
+
+허리가 삐끗해서 마지못해 연차를....

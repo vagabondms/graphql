@@ -1,4 +1,4 @@
-import User from 'src/modules/feed/User';
+import User from '@components/modules/feed/User';
 
 const UserProfile = () => {
   return (

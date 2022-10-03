@@ -7,6 +7,7 @@
     "eamodio.gitlens",
     "graphql.vscode-graphql",
     "graphql.vscode-graphql-syntax",
-    "jonkwheeler.styled-components-snippets"
+    "jonkwheeler.styled-components-snippets",
+    "streetsidesoftware.code-spell-checker"
   ]
 }
