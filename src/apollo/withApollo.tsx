@@ -11,7 +11,9 @@ type PageProps = AppProps['pageProps'] & {
   initialCache?: NormalizedCacheObject;
 };
 
-const initializeApolloClient = (initialCache?: NormalizedCacheObject) => {
+const initializeApolloClient = (
+  initialCache?: NormalizedCacheObject
+): ApolloClient<NormalizedCacheObject> => {
   return new ApolloClient({
     uri: 'http://localhost:3001/api/graphql',
     cache: new InMemoryCache().restore(initialCache ?? {})
@@ -24,7 +26,9 @@ const initializeApolloClient = (initialCache?: NormalizedCacheObject) => {
  * @param ApolloCache getApolloServerSideProps(서버에서)에서 세팅된 cache
  * @returns ApolloClient ApolloProvider에 인자로 주입될 Client
  */
-export const createClient = ({ initialCache }: PageProps) => {
+export const createClient = ({
+  initialCache
+}: PageProps): ApolloClient<NormalizedCacheObject> => {
   const client = initializeApolloClient(initialCache ?? {});
   return client;
 };
@@ -41,7 +45,7 @@ export const getApolloServerSideProps = (
   ) => Promise<{
     props: any;
   }>
-) => {
+): ((context: GetServerSidePropsContext) => Promise<{ props: PageProps }>) => {
   const client = initializeApolloClient();
 
   return async (context: GetServerSidePropsContext) => {
