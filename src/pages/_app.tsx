@@ -6,7 +6,7 @@ import { ThemeProvider } from 'styled-components';
 import type { AppProps } from 'next/app';
 
 import { createClient } from '@apollo/withApollo';
-import DefaultLayout from '@components/elements/common/layouts/Default';
+import DefaultLayout from '@layouts/Default';
 import theme from '@styles/theme';
 
 import 'normalize.css';

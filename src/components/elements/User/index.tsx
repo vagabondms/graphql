@@ -1,7 +1,8 @@
 import type { HTMLAttributes, ReactElement } from 'react';
 import type { User as UserType } from 'src/types/user';
 
-import { RoundProfile, SquareProfile } from './components/Profile';
+import { PostCount } from './components/Info';
+import { RoundProfile } from './components/Profile';
 import UserContext from './context';
 
 export interface UserProps extends HTMLAttributes<HTMLDivElement> {
@@ -17,4 +18,4 @@ const User = ({ userInfo, children }: UserProps): ReactElement => {
 export default User;
 
 User.RoundProfile = RoundProfile;
-User.SquareProfile = SquareProfile;
+User.PostCount = PostCount;

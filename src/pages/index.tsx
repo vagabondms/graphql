@@ -2,10 +2,8 @@ import type { NextPage } from 'next';
 
 import { getApolloServerSideProps } from '@apollo/withApollo';
 
-import UserPage from './user/[idx]';
-
 const Home: NextPage = () => {
-  return <UserPage />;
+  return <div>Home</div>;
 };
 
 export default Home;

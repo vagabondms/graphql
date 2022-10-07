@@ -45,8 +45,9 @@
         }
       }
     ],
+    "react/prop-types": "off",
     "react/jsx-sort-props": [
-      2,
+      "off",
       {
         "callbacksLast": true,
         "shorthandFirst": true,

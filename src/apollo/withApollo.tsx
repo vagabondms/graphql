@@ -38,12 +38,12 @@ export const createClient = ({
  * @param callback ApolloClient가 첫번째 인자로, context(일반적인 NextContext)를 두번째 인자로 받는 콜백.
  * @returns props initialCache를 props에 넣음. 해당 부분을 createClient에서 받아서 사용
  */
-export const getApolloServerSideProps = (
+export const getApolloServerSideProps = <T,>(
   callback: (
     client: ApolloClient<NormalizedCacheObject>,
     context: GetServerSidePropsContext
   ) => Promise<{
-    props: any;
+    props: T;
   }>
 ): ((context: GetServerSidePropsContext) => Promise<{ props: PageProps }>) => {
   const client = initializeApolloClient();

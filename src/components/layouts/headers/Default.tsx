@@ -2,9 +2,11 @@ import Link from 'next/link';
 import React, { ReactElement, useState } from 'react';
 import styled from 'styled-components';
 
-import Search from '../../components/Search';
-
+import User from '@elements/User';
 import { Compass, CreatePost, Heart, House, Logo, Message } from '@icons';
+import { User as UserType } from 'src/types/user';
+
+import Search from './components/Search';
 
 const HeaderWrapper = styled.div`
   position: fixed;
@@ -57,6 +59,13 @@ const LogoButton = styled.button`
 const Header = (): ReactElement => {
   const [searchValue, setSearchValue] = useState<string>('');
 
+  // fake
+  const userInfo: Partial<UserType> = {
+    profileImage:
+      'https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png',
+    nickname: 'vgbdms'
+  };
+
   return (
     <HeaderWrapper>
       <HeaderInner>
@@ -75,6 +84,7 @@ const Header = (): ReactElement => {
             }}
           />
         </SearchContainer>
+        {/* 로그아웃이 되어 있으면 MenuContainer가 로그인 /가입하기 버튼으로 변경 */}
         <MenuContainer>
           <Link href="/">
             <button type="button">
@@ -97,15 +107,11 @@ const Header = (): ReactElement => {
           <button type="button">
             <Heart height={24} width={24} />
           </button>
-          {/* 
-        if 로그인,  
-          프로파일 페이지 링크 보이기
-        else 
-          로그인 버튼
-       */}
-          <Link href="id">
+          <Link href={`${userInfo.nickname}`}>
             <button type="button">
-              <div>user</div>
+              <User userInfo={userInfo}>
+                <User.RoundProfile />
+              </User>
             </button>
           </Link>
         </MenuContainer>
