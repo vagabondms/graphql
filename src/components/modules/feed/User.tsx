@@ -7,8 +7,7 @@ import UserComponent from '@components/elements/User';
 const User = ({ userInfo }: UserProps): ReactElement => {
   return (
     <UserComponent userInfo={userInfo}>
-      {/* <UserComponent.RoundProfile /> */}
-      <UserComponent.SquareProfile />
+      <UserComponent.RoundProfile />
     </UserComponent>
   );
 };

@@ -1,6 +1,6 @@
 import React, { HTMLAttributes, ReactElement } from 'react';
 
-import DefaultBackground from '@components/elements/common/layouts/backgrounds/Default';
+import DefaultBackground from '@layouts/backgrounds/Default';
 
 import Header from './headers/Default';
 

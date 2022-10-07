@@ -1,12 +1,15 @@
-import User from '@components/modules/feed/User';
+import { ReactElement } from 'react';
 
-const UserProfile = () => {
+import UserInfo from '@modules/profile/UserInfo';
+
+const UserProfile = (): ReactElement => {
   return (
     <div>
-      <User
+      <UserInfo
         userInfo={{
           profileImage:
-            'https://cdn.ggumim.co.kr/storage/20220404111013xGLztEbcjz.png'
+            'https://cdn.ggumim.co.kr/storage/20220404111013xGLztEbcjz.png',
+          postCount: 16
         }}
       />
     </div>

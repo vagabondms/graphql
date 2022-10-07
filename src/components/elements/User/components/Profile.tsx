@@ -19,17 +19,4 @@ const RoundProfile = (): ReactElement | null => {
   return <RoundProfileImage src={profileImage} />;
 };
 
-const SquareProfileImage = styled.img`
-  width: 30px;
-  height: 30px;
-`;
-
-const SquareProfile = (): ReactElement | null => {
-  const { profileImage } = useUserContext();
-  if (typeof profileImage !== 'string') {
-    return null;
-  }
-  return <SquareProfileImage src={profileImage} />;
-};
-
-export { RoundProfile, SquareProfile };
+export { RoundProfile };
