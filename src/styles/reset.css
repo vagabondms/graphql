@@ -1,3 +1,5 @@
+@import url('../styles/variables.css');
+
 html,
 body,
 div,
@@ -101,6 +103,8 @@ section {
   display: block;
 }
 body {
+  height: 100%;
+  background: rgb(var(--ig-primary-background));
   line-height: 1;
 }
 ol,
@@ -121,4 +125,30 @@ q:after {
 table {
   border-collapse: collapse;
   border-spacing: 0;
+}
+
+button {
+  overflow: visible;
+  padding: 0;
+  border: none;
+  border-radius: 0;
+  background: inherit;
+  box-shadow: none;
+  cursor: pointer;
+}
+
+* {
+  box-sizing: border-box;
+  -webkit-touch-callout: none;
+  user-select: none;
+}
+input:focus {
+  outline: none;
+}
+
+html,
+body,
+#__next {
+  width: 100%;
+  height: 100%;
 }

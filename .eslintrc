@@ -72,6 +72,20 @@
     //typescript-eslint
     "@typescript-eslint/explicit-function-return-type": "warn",
     "@typescript-eslint/promise-function-async": "error",
-    "@typescript-eslint/prefer-optional-chain": "error"
+    "@typescript-eslint/prefer-optional-chain": "error",
+    // interface나 type 순서를 정렬. autofix가 되지 않으므로 불편하면 삭제처리 필요
+    "@typescript-eslint/member-ordering": [
+      "error",
+      {
+        "interfaces": {
+          "memberTypes": ["signature", "field", "method", "constructor"],
+          "order": "alphabetically"
+        },
+        "typeLiterals": {
+          "memberTypes": ["signature", "field", "method", "constructor"],
+          "order": "alphabetically"
+        }
+      }
+    ]
   }
 }
