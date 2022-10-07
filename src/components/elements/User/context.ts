@@ -1,6 +1,6 @@
 import { createContext, useContext } from 'react';
 
-import type { User } from 'src/types/user';
+import type { User } from 'src/type/user';
 
 const UserContext = createContext<null | Partial<User>>(null);
 

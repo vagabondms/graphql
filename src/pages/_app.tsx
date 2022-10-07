@@ -6,7 +6,6 @@ import { ThemeProvider } from 'styled-components';
 import type { AppProps } from 'next/app';
 
 import { createClient } from '@apollo/withApollo';
-import DefaultLayout from '@layouts/Default';
 import theme from '@styles/theme';
 
 import 'normalize.css';
@@ -24,9 +23,7 @@ const MyApp = ({ Component, pageProps }: AppProps): ReactElement => {
 
       <ThemeProvider theme={theme}>
         <ApolloProvider client={client}>
-          <DefaultLayout>
-            <Component {...pageProps} />
-          </DefaultLayout>
+          <Component {...pageProps} />
         </ApolloProvider>
       </ThemeProvider>
     </>

@@ -4,7 +4,7 @@ import styled from 'styled-components';
 
 import User from '@elements/User';
 import { Compass, CreatePost, Heart, House, Logo, Message } from '@icons';
-import { User as UserType } from 'src/types/user';
+import { User as UserType } from 'src/type/user';
 
 import Search from './components/Search';
 

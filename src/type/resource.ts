@@ -1,8 +1,8 @@
 type Media = {
-  type: MediaType;
-  src: string;
-  width: number;
   height: number;
+  src: string;
+  type: MediaType;
+  width: number;
 };
 
 type MediaType = 'Image' | 'Video';

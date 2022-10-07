@@ -9,32 +9,32 @@ import type { User } from './user';
  */
 
 type Post = {
-  id: string;
   author: User;
-  isMine: boolean;
-  isUpdated: boolean;
-  medias: Media[];
-  description: string;
-  isLike: boolean;
-  likeCount: number;
-  likeMembers: User[];
   commentCount: number;
   comments: Comment[];
+  description: string;
+  id: string;
+  isLike: boolean;
+  isMine: boolean;
+  isUpdated: boolean;
   lastModifiedAt: string;
+  likeCount: number;
+  likeMembers: User[];
+  medias: Media[];
 };
 
 type ItemType = 'Post' | 'Comment';
 
 type Comment = {
-  id: string;
   author: User;
-  isMine: boolean;
+  createdAt: string;
   description: string;
+  id: string;
   isLike: boolean;
+  isMine: boolean;
   likeCount: number;
   likeMembers: User[];
   subCommentCount: number;
-  createdAt: string;
 };
 
 export type { Post, Comment, ItemType };

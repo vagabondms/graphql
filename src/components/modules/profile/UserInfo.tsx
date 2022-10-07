@@ -1,6 +1,6 @@
-import React, { ReactElement } from 'react';
+import { ReactElement } from 'react';
 
-import User, { UserProps } from '@components/elements/User';
+import User, { UserProps } from '@elements/User';
 
 const UserInfo = ({ userInfo }: UserProps): ReactElement => {
   return (

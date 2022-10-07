@@ -1,5 +1,5 @@
 import type { HTMLAttributes, ReactElement } from 'react';
-import type { User as UserType } from 'src/types/user';
+import type { User as UserType } from 'src/type/user';
 
 import { PostCount } from './components/Info';
 import { RoundProfile } from './components/Profile';
