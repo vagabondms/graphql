@@ -5,6 +5,7 @@ import DefaultLayout from '@layouts/Default';
 
 const Home: NextPage = () => {
   const login = true;
+
   if (login) {
     return <DefaultLayout>Home</DefaultLayout>;
   }
@@ -18,7 +19,4 @@ export const getServerSideProps = getApolloServerSideProps(async client => {
   // await client.query({
   //   query: GET_DIE
   // });
-  return {
-    props: {}
-  };
 });
