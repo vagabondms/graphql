@@ -24,6 +24,13 @@
     "no-shadow": ["error"],
     // 화살표 함수에 항상 return 값을 기입하도록 설정
     "arrow-body-style": ["error", "always"],
+    // import문 내부에서 member 순서를 정렬. (import/order와 충돌 가능성 있음.)
+    "sort-imports": [
+      "error",
+      {
+        "ignoreDeclarationSort": true
+      }
+    ],
     // 파일 상단 Import 문의 정렬 순서를 정의하는 규칙
     "import/order": [
       "error",
