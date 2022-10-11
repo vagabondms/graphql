@@ -2,7 +2,7 @@ import Link from 'next/link';
 import React, { ReactElement, useState } from 'react';
 import styled from 'styled-components';
 
-import User from '@elements/User';
+import User, { UserProfile as UserProfileElement } from '@elements/User';
 import { Compass, CreatePost, Heart, House, Logo, Message } from '@icons';
 import { User as UserType } from 'src/type/user';
 
@@ -54,6 +54,11 @@ const MenuContainer = styled.div`
 
 const LogoButton = styled.button`
   margin-top: 7px;
+`;
+
+const UserProfile = styled(UserProfileElement)`
+  width: 30px;
+  height: 30px;
 `;
 
 const Header = (): ReactElement => {
@@ -110,7 +115,7 @@ const Header = (): ReactElement => {
           <Link href={`${userInfo.nickname}`}>
             <button type="button">
               <User userInfo={userInfo}>
-                <User.RoundProfile />
+                <UserProfile />
               </User>
             </button>
           </Link>

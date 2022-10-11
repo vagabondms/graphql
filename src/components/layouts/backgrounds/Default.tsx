@@ -1,3 +1,4 @@
+import { ReactElement, ReactNode } from 'react';
 import styled from 'styled-components';
 
 const Background = styled.div`
@@ -7,4 +8,19 @@ const Background = styled.div`
   background-color: rgb(var(--ig-secondary-background));
 `;
 
-export default Background;
+const ContentSection = styled.div`
+  width: calc(100% - 40px);
+  max-width: 935px;
+  padding: 30px 20px 0;
+  margin: 0 auto 30px;
+`;
+
+const Default = ({ children }: { children: ReactNode }): ReactElement => {
+  return (
+    <Background>
+      <ContentSection> {children}</ContentSection>
+    </Background>
+  );
+};
+
+export default Default;

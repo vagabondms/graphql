@@ -5,7 +5,7 @@ import type { User } from '@type/user';
 
 import { getApolloServerSideProps } from '@apollo/withApollo';
 import DefaultLayout from '@layouts/Default';
-import UserProfile from '@templates/UserProfile';
+import UserProfile from 'src/components/templates/UserProfile';
 
 interface PageProps {
   userInfo: Partial<User>;
