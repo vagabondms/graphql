@@ -44,17 +44,25 @@ export const getApolloServerSideProps = <T,>(
     context: GetServerSidePropsContext
   ) => Promise<{
     props: T;
-  }>
+  } | void>
 ): ((context: GetServerSidePropsContext) => Promise<{ props: PageProps }>) => {
-  const client = initializeApolloClient();
-
   return async (context: GetServerSidePropsContext) => {
-    const { props } = await callback(client, context);
+    const client = initializeApolloClient();
+    const result = await callback(client, context);
     const initialCache = client.cache.extract();
+
+    if (typeof result === 'object' && 'props' in result) {
+      return {
+        props: {
+          initialCache,
+          ...result.props
+        }
+      };
+    }
+
     return {
       props: {
-        initialCache,
-        ...props
+        initialCache
       }
     };
   };

@@ -1,8 +1,8 @@
 import { HTMLAttributes } from 'react';
 
 /**
- * 기본적인 Icon들의 Property 정의.
- * 추후 color나 크기를 인자로 받을 수 있게 변경이 필요
+ * fill : icon 색
+ * height, width: icon 크기
  */
 interface IconProps extends HTMLAttributes<HTMLOrSVGElement> {
   fill?: `#${string}`;
