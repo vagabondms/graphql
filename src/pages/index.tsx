@@ -1,15 +1,16 @@
 import type { NextPage } from 'next';
 
 import { getApolloServerSideProps } from '@apollo/withApollo';
-import DefaultLayout from '@layouts/Default';
+import DefaultLayout from '@layouts/Main';
+import Login from 'src/components/templates/Login';
 
 const Home: NextPage = () => {
-  const login = true;
+  const login = false;
 
   if (login) {
     return <DefaultLayout>Home</DefaultLayout>;
   }
-  return <div> needs login</div>;
+  return <Login />;
 };
 
 export default Home;

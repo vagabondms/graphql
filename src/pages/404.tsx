@@ -1,7 +1,7 @@
 import { NextPage } from 'next';
 import Link from 'next/link';
 
-import DefaultLayout from '@layouts/Default';
+import DefaultLayout from '@layouts/Main';
 
 const NotFound: NextPage = () => {
   return (
