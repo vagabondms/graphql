@@ -1,6 +1,8 @@
 import { ButtonHTMLAttributes, ReactElement } from 'react';
 import styled from 'styled-components';
 
+import useButton from '@hooks/useButton';
+
 const Button = styled.button`
   position: relative;
   width: 100%;
@@ -25,17 +27,10 @@ interface LargeProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   loading?: boolean;
 }
 
-const Large = ({
-  children,
-  loading = false,
-  disabled,
-  ...rest
-}: LargeProps): ReactElement => {
-  return (
-    <Button disabled={disabled || loading} {...rest}>
-      {loading ? 'loading...' : children}
-    </Button>
-  );
+const Large = (props: LargeProps): ReactElement => {
+  const buttonProps = useButton(props);
+
+  return <Button {...buttonProps} />;
 };
 
 export default Large;

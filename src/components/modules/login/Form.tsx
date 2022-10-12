@@ -51,7 +51,9 @@ const Login = (): ReactElement => {
         />
       </InputWrapper>
       <ButtonWrapper>
-        <ButtonLarge disabled={buttonDisabled}>로그인</ButtonLarge>
+        <ButtonLarge type="submit" disabled={buttonDisabled}>
+          로그인
+        </ButtonLarge>
       </ButtonWrapper>
     </Container>
   );

@@ -1,5 +1,7 @@
-import { InputHTMLAttributes, ReactElement, useState } from 'react';
+import { InputHTMLAttributes, ReactElement } from 'react';
 import styled, { css } from 'styled-components';
+
+import useBooleanState from '@hooks/useBooleanState';
 
 const Container = styled.div`
   position: relative;
@@ -66,6 +68,7 @@ const Label = styled.label<LabelProps>`
 
 const Button = styled.button`
   padding: 5px 10px;
+  font-weight: var(--font-weight-system-bold);
   white-space: nowrap;
 `;
 
@@ -76,7 +79,7 @@ interface LabeledInputProps extends InputHTMLAttributes<HTMLInputElement> {
 const LabeledInput = (props: LabeledInputProps): ReactElement => {
   const { label, value, onChange, type, ...rest } = props;
 
-  const [showPassword, setShowPassword] = useState<boolean>(false);
+  const [showPassword, toggleShowPassword] = useBooleanState();
 
   const newType = type === 'password' && showPassword ? 'text' : type;
   // number 체크
@@ -95,14 +98,7 @@ const LabeledInput = (props: LabeledInputProps): ReactElement => {
       />
 
       {type === 'password' && isValueExists && (
-        <Button
-          type="button"
-          onClick={(): void => {
-            setShowPassword(prev => {
-              return !prev;
-            });
-          }}
-        >
+        <Button type="button" onClick={toggleShowPassword}>
           {showPassword ? '숨기기' : '비밀번호 표시'}
         </Button>
       )}

@@ -1,13 +1,6 @@
 import styled from 'styled-components';
 
-export const LogoWrapper = styled.div`
-  display: flex;
-  justify-content: center;
-  margin-top: calc(var(--base-unit) * 9);
-  margin-bottom: calc(var(--base-unit) * 3);
-`;
-
-export const Container = styled.div`
+export const Container = styled.form`
   display: flex;
   max-width: 350px;
   flex-direction: column;
@@ -18,6 +11,13 @@ export const Container = styled.div`
   margin-top: 12px;
   background-color: rgb(var(--ig-primary-background));
   color: rgb(var(--ig-primary-text));
+`;
+
+export const LogoWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  margin-top: calc(var(--base-unit) * 9);
+  margin-bottom: calc(var(--base-unit) * 3);
 `;
 
 export const InputWrapper = styled.div`
