@@ -4,7 +4,7 @@ import Link from 'next/link';
 import type { User } from '@type/user';
 
 import { getApolloServerSideProps } from '@apollo/withApollo';
-import DefaultLayout from '@layouts/Default';
+import DefaultLayout from '@layouts/Main';
 import UserProfile from 'src/components/templates/UserProfile';
 
 interface PageProps {
