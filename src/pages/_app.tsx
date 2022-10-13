@@ -6,6 +6,7 @@ import { ThemeProvider } from 'styled-components';
 import type { AppProps } from 'next/app';
 
 import { createClient } from '@apollo/withApollo';
+import LoadingIndicator from '@layouts/LoadingIndicator';
 import theme from '@styles/theme';
 
 import 'normalize.css';
@@ -20,9 +21,9 @@ const MyApp = ({ Component, pageProps }: AppProps): ReactElement => {
         <meta content="width=device-width, initial-scale=1" name="viewport" />
         <title>boilerplate</title>
       </Head>
-
       <ThemeProvider theme={theme}>
         <ApolloProvider client={client}>
+          <LoadingIndicator />
           <Component {...pageProps} />
         </ApolloProvider>
       </ThemeProvider>
