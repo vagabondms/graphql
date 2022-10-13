@@ -29,7 +29,7 @@ const Login = (): ReactElement => {
       <InputWrapper>
         <LabeledInput
           label="전화번호, 사용자 이름 또는 이메일"
-          type="text"
+          type="email"
           value={authInfo.id}
           onChange={(e): void => {
             setAuthInfo(prev => {

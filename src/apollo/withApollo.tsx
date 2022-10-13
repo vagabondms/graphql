@@ -1,22 +1,28 @@
 import {
   ApolloClient,
   InMemoryCache,
-  NormalizedCacheObject
+  NormalizedCacheObject,
+  from
 } from '@apollo/client';
 import { GetServerSidePropsContext } from 'next';
 
 import type { AppProps } from 'next/app';
 
+import { logger } from './links';
+
 type PageProps = AppProps['pageProps'] & {
   initialCache?: NormalizedCacheObject;
 };
+
+const link = process.env.NODE_ENV === 'production' ? from([]) : from([logger]);
 
 const initializeApolloClient = (
   initialCache?: NormalizedCacheObject
 ): ApolloClient<NormalizedCacheObject> => {
   return new ApolloClient({
     uri: 'http://localhost:3001/api/graphql',
-    cache: new InMemoryCache().restore(initialCache ?? {})
+    cache: new InMemoryCache().restore(initialCache ?? {}),
+    link
   });
 };
 
