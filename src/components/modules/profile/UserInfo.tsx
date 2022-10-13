@@ -1,7 +1,7 @@
 import { ReactElement } from 'react';
 
-import User, { UserPostCount, UserQuotes } from '@elements/User';
-import { User as UserType } from '@type/user';
+import User, { UserPostCount, UserQuotes } from '@/elements/User';
+import { User as UserType } from '@/type/user';
 import { Gear } from 'src/icons';
 
 import {

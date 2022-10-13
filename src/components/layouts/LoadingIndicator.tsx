@@ -2,7 +2,7 @@ import { useRouter } from 'next/router';
 import { ReactElement, useCallback, useEffect } from 'react';
 import styled, { css } from 'styled-components';
 
-import useBooleanState from '@hooks/useBooleanState';
+import useBooleanState from '@/hooks/useBooleanState';
 
 type IndicatorProps = {
   isLoading: boolean;

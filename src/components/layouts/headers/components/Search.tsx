@@ -1,7 +1,7 @@
 import { ChangeEventHandler, ReactElement, useRef, useState } from 'react';
 import styled from 'styled-components';
 
-import { Search as SearchIcon } from '@icons';
+import { Search as SearchIcon } from '@/icons';
 
 interface SearchProps {
   onChange: ChangeEventHandler<HTMLInputElement>;

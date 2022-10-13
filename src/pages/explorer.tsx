@@ -1,6 +1,6 @@
 import React from 'react';
 
-import DefaultLayout from '@layouts/Main';
+import DefaultLayout from '@/layouts/Main';
 
 const explorer = () => {
   return (

@@ -1,8 +1,8 @@
 import type { NextPage } from 'next';
 
-import { getApolloServerSideProps } from '@apollo/withApollo';
-import DefaultLayout from '@layouts/Main';
-import Login from 'src/components/templates/Login';
+import { getApolloServerSideProps } from '@/apollo/withApollo';
+import DefaultLayout from '@/layouts/Main';
+import Login from '@/templates/Login';
 
 const Home: NextPage = () => {
   const login = false;

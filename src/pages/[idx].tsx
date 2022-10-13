@@ -1,10 +1,12 @@
+import { useQuery } from '@apollo/client';
 import { NextPage } from 'next';
 import Link from 'next/link';
 
-import type { User } from '@type/user';
+import type { User } from '@/type/user';
 
-import { getApolloServerSideProps } from '@apollo/withApollo';
-import DefaultLayout from '@layouts/Main';
+import { getApolloServerSideProps } from '@/apollo/withApollo';
+import DefaultLayout from '@/layouts/Main';
+import { GET_NUM } from '@/queries/example';
 import UserProfile from 'src/components/templates/UserProfile';
 
 interface PageProps {
@@ -12,9 +14,9 @@ interface PageProps {
 }
 
 const UserPage: NextPage<PageProps> = ({ userInfo }) => {
-  console.log(userInfo);
+  const { data } = useQuery(GET_NUM);
 
-  if (userInfo) {
+  if (userInfo && data) {
     return (
       <DefaultLayout>
         <UserProfile />
@@ -42,7 +44,7 @@ export default UserPage;
 
 export const getServerSideProps = getApolloServerSideProps<PageProps>(
   async client => {
-    console.log(client);
+    client.cache.extract();
     return {
       props: {
         userInfo: {}

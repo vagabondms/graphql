@@ -1,13 +1,11 @@
 import { ReactElement } from 'react';
 
-import type { UserProps } from '@components/elements/User';
-
-import UserComponent from '@components/elements/User';
+import UserComponent, { UserProfile, UserProps } from '@/elements/User';
 
 const User = ({ userInfo }: UserProps): ReactElement => {
   return (
     <UserComponent userInfo={userInfo}>
-      <UserComponent.RoundProfile />
+      <UserProfile />
     </UserComponent>
   );
 };

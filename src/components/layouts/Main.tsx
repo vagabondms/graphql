@@ -1,6 +1,6 @@
-import React, { ReactElement } from 'react';
+import { ReactElement } from 'react';
 
-import Background from '@layouts/backgrounds/Main';
+import Background from '@/layouts/backgrounds/Main';
 
 import ContentSection from './contents/Main';
 import Header from './headers/Main';
