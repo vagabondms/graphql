@@ -5,9 +5,9 @@ import { ThemeProvider } from 'styled-components';
 
 import type { AppProps } from 'next/app';
 
-import { createClient } from '@apollo/withApollo';
-import LoadingIndicator from '@layouts/LoadingIndicator';
-import theme from '@styles/theme';
+import { createClient } from '@/apollo/withApollo';
+import LoadingIndicator from '@/layouts/LoadingIndicator';
+import theme from '@/styles/theme';
 
 import 'normalize.css';
 import '../styles/reset.css';

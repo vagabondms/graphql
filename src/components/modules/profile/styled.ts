@@ -4,7 +4,7 @@ import {
   UserName as UserNameElement,
   UserNickname as UserNicknameElement,
   UserProfile as UserProfileElement
-} from '@elements/User';
+} from '@/elements/User';
 
 export const Wrapper = styled.div`
   position: relative;

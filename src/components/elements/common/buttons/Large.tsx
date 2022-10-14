@@ -1,7 +1,7 @@
 import { ButtonHTMLAttributes, ReactElement } from 'react';
 import styled from 'styled-components';
 
-import useButton from '@hooks/useButton';
+import useButton from '@/hooks/useButton';
 
 const Button = styled.button`
   position: relative;

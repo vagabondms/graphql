@@ -1,9 +1,17 @@
 import { gql } from '@apollo/client';
 
-export const GET_DIE = gql`
-  query getDie {
+export const ROLL_ONCE = gql`
+  query rollOnce {
     getDie(numSides: 6) {
       rollOnce
+    }
+  }
+`;
+
+export const GET_NUM = gql`
+  query getDie {
+    getDie(numSides: 6) {
+      numSides
     }
   }
 `;

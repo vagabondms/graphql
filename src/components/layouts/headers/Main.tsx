@@ -2,8 +2,8 @@ import Link from 'next/link';
 import React, { ReactElement, useState } from 'react';
 import styled from 'styled-components';
 
-import User, { UserProfile as UserProfileElement } from '@elements/User';
-import { Compass, CreatePost, Heart, House, Logo, Message } from '@icons';
+import User, { UserProfile as UserProfileElement } from '@/elements/User';
+import { Compass, CreatePost, Heart, House, Logo, Message } from '@/icons';
 import { User as UserType } from 'src/type/user';
 
 import Search from './components/Search';

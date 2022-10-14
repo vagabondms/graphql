@@ -1,7 +1,7 @@
 import { InputHTMLAttributes, ReactElement } from 'react';
 import styled, { css } from 'styled-components';
 
-import useBooleanState from '@hooks/useBooleanState';
+import useBooleanState from '@/hooks/useBooleanState';
 
 const Container = styled.div`
   position: relative;

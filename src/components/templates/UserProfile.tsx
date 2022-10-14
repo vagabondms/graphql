@@ -1,6 +1,6 @@
 import { ReactElement } from 'react';
 
-import UserInfo from '@modules/profile/UserInfo';
+import UserInfo from '@/modules/profile/UserInfo';
 
 const UserProfile = (): ReactElement => {
   return (

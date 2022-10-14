@@ -2,17 +2,17 @@
   "compilerOptions": {
     "baseUrl": "./",
     "paths": {
-      "@elements/*": ["src/components/elements/*"],
-      "@layouts/*": ["src/components/layouts/*"],
-      "@templates/*": ["src/templates/*"],
-      "@modules/*": ["src/components/modules/*"],
-      "@hooks/*": ["src/hooks/*"],
-      "@icons": ["src/icons"],
-      "@styles/*": ["src/styles/*"],
-      "@libs/*": ["src/libs/*"],
-      "@apollo/*": ["src/apollo/*"],
-      "@queries/*": ["src/queries/*"],
-      "@type/*": ["src/type/*"]
+      "@/elements/*": ["src/components/elements/*"],
+      "@/layouts/*": ["src/components/layouts/*"],
+      "@/templates/*": ["src/components/templates/*"],
+      "@/modules/*": ["src/components/modules/*"],
+      "@/hooks/*": ["src/hooks/*"],
+      "@/icons": ["src/icons"],
+      "@/styles/*": ["src/styles/*"],
+      "@/libs/*": ["src/libs/*"],
+      "@/apollo/*": ["src/apollo/*"],
+      "@/queries/*": ["src/queries/*"],
+      "@/type/*": ["src/type/*"]
     }
   }
 }

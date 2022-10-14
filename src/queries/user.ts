@@ -1,9 +1,9 @@
 import { gql } from '@apollo/client';
 
-const getUser = gql`
-  query getUser {
+const GET_USER = gql`
+  query {
     someField
   }
 `;
 
-export { getUser };
+export { GET_USER };

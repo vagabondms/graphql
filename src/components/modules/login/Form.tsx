@@ -1,8 +1,8 @@
 import { ReactElement, useState } from 'react';
 
-import { ButtonLarge } from '@elements/common/buttons';
-import LabeledInput from '@elements/common/inputs/Labeled';
-import { Logo } from '@icons';
+import { ButtonLarge } from '@/elements/common/buttons';
+import LabeledInput from '@/elements/common/inputs/Labeled';
+import { Logo } from '@/icons';
 
 import { ButtonWrapper, Container, InputWrapper, LogoWrapper } from './styled';
 
